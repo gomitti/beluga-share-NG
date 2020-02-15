@@ -1,0 +1,20 @@
+{
+  "name": "beluga-share-NG",
+  "version": "1.0.0",
+  "description": "共有NG機能の試作",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gomitti/beluga-share-NG.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gomitti/beluga-share-NG/issues"
+  },
+  "homepage": "https://github.com/gomitti/beluga-share-NG#readme"
+}
