@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "tsc": "tsc"
+    "start":"node ./dist/setver.js"
   },
   "repository": {
     "type": "git",
