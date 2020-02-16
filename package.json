@@ -4,7 +4,7 @@
   "description": "共有NG機能の試作",
   "main": "server.js",
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "tsc",
     "start":"node ./dist/setver.js"
   },
   "repository": {
