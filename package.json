@@ -2,7 +2,7 @@
   "name": "beluga-share-NG",
   "version": "1.0.0",
   "description": "共有NG機能の試作",
-  "main": "./dist/server.js",
+  "main": "dist/server.js",
   "scripts": {
     "build-ts": "tsc",
     "postinstall": "mkdir -p dist & npm run build-ts",

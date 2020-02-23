@@ -15,11 +15,15 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 const router: express.Router = express.Router()
-router.get('/api/getTest', (req:express.Request, res:express.Response) => {
-  res.send(req.query)
+router.get('/api/list', (_:express.Request, res:express.Response) => {
+  res.send("")
 })
-router.post('/api/postTest', (req:express.Request, res:express.Response) => {
-  res.send(req.body)
+
+router.post('/api/create', (_:express.Request, res:express.Response) => {
+  res.send("")
+})
+router.post('/api/update', (_:express.Request, res:express.Response) => {
+  res.send("")
 })
 app.use(router)
 

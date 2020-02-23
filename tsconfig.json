@@ -1,10 +1,11 @@
 {
   "scripts": {
-    "start": "node ./dist/bin/www.js",
-    "nodemon": "nodemon ./dist/bin/www.js",
+    "start": "node ./dist/server.js",
+    "nodemon": "nodemon ./dist/server.js",
     "build": "tsc",
     "watch": "tsc -w"
   },
+  "include": ["src/**/*"],
 
   "compilerOptions": {
     /* Basic Options */
