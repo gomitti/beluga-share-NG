@@ -1,9 +1,8 @@
-import express = require('express')
+import express = require('express');
+import * as conf from './conf';
 
 
-const PORT = process.env.PORT || 5000
-
-const app: express.Express = express()
+const app: express.Express = express();
 app.use((_, res, next) => {
   res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
@@ -27,6 +26,6 @@ router.post('/api/update', (_:express.Request, res:express.Response) => {
 })
 app.use(router)
 
-app.listen(PORT,()=>{ 
+app.listen(conf.PORT,()=>{ 
     console.log("start")
 })

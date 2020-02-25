@@ -27,6 +27,8 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/mongodb": "^3.3.16",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.3"
   }
 }
