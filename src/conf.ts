@@ -1,6 +1,6 @@
 const PORT = process.env.PORT || 5000;
+
 /** [protocol]://[user]:[pwd]@[host]:[port] */
-//const REDIS_URL = process.env.REDIS_URL || "not_set_redis_url"
 const MONGO_PROTOCOL = process.env.MONGO_PROTOCOL || "mongodb+srv";
 const MONGO_USER = process.env.MONGO_USER || "not_set_user";
 const MONGO_PWD = process.env.MONGO_PWD || "not_set_pwd";

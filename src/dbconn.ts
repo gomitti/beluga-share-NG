@@ -11,6 +11,7 @@ const option = {
 export async function connect() {
   const client = await MongoDB.MongoClient.connect(uri,option);
   const db = await client.db('ng');
+  
   await db.collection<schema.Vote>('vote').insertOne({by_name:'foo',target_name:"bar"});
   client.close();
 };
