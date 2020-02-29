@@ -10,14 +10,15 @@ const option = {
 
 export async function connect() {
   const client = await MongoDB.MongoClient.connect(uri,option);
-  const db = await client.db('ng');
+  const db = await client.db(schema.DBNAME);
   
   await db.collection<schema.Vote>('vote').insertOne({by_name:'foo',target_name:"bar"});
   client.close();
 };
+
 /***
  * how to get timestamp
 let ObjectId = require('mongodb').ObjectID
 let docObjID = new ObjectId(<Your document _id>)
 console.log(docObjID.getTimestamp())
- * /
+ */

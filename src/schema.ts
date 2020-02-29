@@ -3,6 +3,8 @@
  */
 import {ObjectId} from 'mongodb';
 
+export const DBNAME:string = 'ng';
+
 /** 投票
  * 投票時刻は_idに格納されるからまあいいか
  */
