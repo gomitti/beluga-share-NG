@@ -1,13 +1,12 @@
+import * as conf from './conf'
 import express = require('express')
 import path = require('path')
-import * as conf from './conf'
-
 
 const app: express.Express = express()
 
 app.use((_, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*")
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
 app.use('/public', express.static(path.join(__dirname, '../static')))
@@ -33,8 +32,8 @@ app.use(express.urlencoded({ extended: true }))
 //   res.send("")
 // });
 
-//app.use(router);
+// app.use(router);
 
-app.listen(conf.PORT,()=>{ 
-    console.log("start")
+app.listen(conf.PORT, () => {
+  console.log('start')
 })

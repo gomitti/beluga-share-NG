@@ -1,6 +1,7 @@
 dist
+.eslintrc.json
 
-# Logs
+# Log
 logs
 *.log
 npm-debug.log*
