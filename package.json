@@ -9,6 +9,11 @@
     "start": "npm run serve",
     "serve": "node dist/server.js"
   },
+  "engines":{
+    "node": ">=12.16.0",
+    "npm":">=6.13.4"
+  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gomitti/beluga-share-NG.git"
