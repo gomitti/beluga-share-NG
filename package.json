@@ -5,15 +5,14 @@
   "main": "dist/server.js",
   "scripts": {
     "build-ts": "tsc",
-    "postinstall": "mkdir -p dist & npm run build-ts",
+    "postinstall": "mkdir -p dist & npm run build-ts & cp src/*.js dist",
     "start": "npm run serve",
-    "serve": "node dist/server.js"
+    "serve": "node dist/server.js  --experimental-worker"
   },
-  "engines":{
+  "engines": {
     "node": ">=12.16.0",
-    "npm":">=6.13.4"
+    "npm": ">=6.13.4"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gomitti/beluga-share-NG.git"
@@ -42,6 +41,8 @@
   "dependencies": {
     "@types/mongodb": "^3.3.16",
     "express": "^4.17.1",
-    "mongodb": "^3.5.3"
-  }
+    "mongodb": "^3.5.3",
+   "minimist": ">=1.2.3"
+}
+
 }

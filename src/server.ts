@@ -1,8 +1,12 @@
-import * as conf from './conf'
-import express = require('express')
 import path = require('path')
+import express = require('express')
+
+import * as stores from './store'
+import * as conf from './conf'
+
 
 const app: express.Express = express()
+
 
 app.use((_, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
@@ -11,7 +15,6 @@ app.use((_, res, next) => {
 })
 app.use('/public', express.static(path.join(__dirname, '../static')))
 
-// body-parserに基づいた着信リクエストの解析
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
@@ -24,7 +27,10 @@ router.get('/api/create', (req:express.Request, res:express.Response) => {
   // exists param -apikey
   res.send(req.params.toString())
 })
-router.post('/api/update', (_:express.Request, res:express.Response) => {
+router.post('/api/vote', (_:express.Request, res:express.Response) => {
+  const _name:string = ""
+  const _now:Date = new Date()
+  stores.updateHash(_name, _now)
   res.send('')
 })
 router.post('/api/update', (_:express.Request, res:express.Response) => {
